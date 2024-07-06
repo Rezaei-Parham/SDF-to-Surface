@@ -1,31 +1,33 @@
 # Surface Extraction using Signed Distance Functions with Gradient Descent and Langevin Dynamics
 
-## Overview
+## Introduction
 
-This project demonstrates methods for extracting surfaces using Signed Distance Functions (SDFs). It compares two optimization techniques:
+In this notebook, we will explore methods for extracting surfaces using Signed Distance Functions (SDFs). Specifically, we will compare two optimization techniques:
 - **Gradient Descent**
 - **Langevin Dynamics**
 
-The primary goal is to show that Langevin Dynamics can mitigate the problem of gradient descent becoming peaky on the surface, thereby achieving more uniform surface coverage.
+### Objectives
 
-## Objectives
+The primary goal is to demonstrate that Langevin Dynamics can mitigate the problem of gradient descent becoming peaky on the surface, thereby achieving more uniform surface coverage. 
 
-1. Load a detailed 3D mesh (Stanford Bunny).
-2. Compute the signed distance function (SDF) for the loaded mesh.
-3. Generate random points within the 3D space.
-4. Optimize the positions of the points using Gradient Descent and Langevin Dynamics.
-5. Visualize the initial and final positions of the points using Plotly.
+### Approach
 
-## Requirements
+1. **Shape Construction**: Create a 3D shape consisting of a sphere and a pyramid.
+2. **SDF Calculation**: Compute the signed distance function (SDF) for the constructed shape.
+3. **Random Point Generation**: Generate random points within the 3D space.
+4. **Optimization Techniques**:
+    - **Gradient Descent**: Optimize the positions of the points using gradient descent.
+    - **Langevin Dynamics**: Optimize the positions of the points using Langevin dynamics, which adds stochastic noise to the gradient updates.
+5. **Visualization**: Use Plotly for interactive 3D visualization of the surfaces and optimized points.
 
-To run this project, you need the following Python libraries:
+### Required Libraries
 
+To run this notebook, you will need the following Python libraries:
 - numpy
 - plotly
 - scipy
 - scikit-image
 
 You can install these libraries using pip:
-
 ```bash
 pip install numpy plotly scipy scikit-image
